@@ -303,5 +303,26 @@
     </footer>
     <!-- <script src="/js/detalle.js" type="module"></script> -->
     <script src="/js/script.js" type="module"></script>
+    <script src="/js/cart.js" type="module"></script>
+    <script type="module">
+import { addToCart } from "./js/cart.js";
+
+document.querySelector("button.w-full").addEventListener("click", () => {
+    const nombre = document.querySelector("h1").textContent.trim();
+    const precio = document.querySelector(".text-lg.font-semibold").textContent.replace(/\$|,/g, "").trim();
+    const imagen = document.querySelector("section img").src;
+
+    const product = {
+        id: nombre.toLowerCase().replace(/\s+/g, "-"), // ID simple
+        nombre,
+        precio,
+        imagen,
+        cantidad: 1
+    };
+
+    addToCart(product);
+    alert("Producto agregado a la bolsa ✅");
+});
+</script>
   </body>
 </html>

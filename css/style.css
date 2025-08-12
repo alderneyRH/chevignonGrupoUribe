@@ -213,4 +213,16 @@ body {
 
 }
 
+ /* Fondo inicial para el hero */
+#hero-section {
+  background-image: url('/assets/images/fondoBody.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+section:not(#hero-section) {
+  background-color: white;
+}
+
 

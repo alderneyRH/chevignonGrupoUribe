@@ -26,57 +26,18 @@
     <button class="text-xl" id="cerrarCarrito">✖️</button>
   </div>
 
-  <!-- Contenido del producto -->
-  <div class="p-4 flex flex-col gap-4 flex-grow">
+    <div id="cart-items" class="p-4 flex flex-col gap-4 flex-grow overflow-y-auto"></div>
 
-    <!-- Producto -->
-    <div class="flex gap-4">
-      <!-- Imagen -->
-      <img class="w-20 h-auto object-cover"
-        src="https://chevignon.vtexassets.com/arquivos/ids/1974086-96-auto"
-        alt="Chaqueta">
-
-      <!-- Info producto -->
-      <div class="flex flex-col text-sm w-full">
-        <!-- Título -->
-        <p class="text-[14px] font-medium leading-snug mb-1">
-          Chaqueta en Denim Tipo Trucker con Cuello en Cuero Azul Ultra Oscuro para Hombre
-        </p>
-
-        <!-- Talla y Color -->
-        <div class="flex gap-2 text-[13px] text-gray-700 mb-1">
-          <p><span class="font-semibold">Talla:</span> L</p>
-          <p><span class="font-semibold">Color:</span> 63_322G450_AZU193924</p>
-        </div>
-
-        <!-- Precio -->
-        <p class="text-[14px] font-semibold mb-2">$ 398.900</p>
-
-        <!-- Cantidad + basura -->
-        <div class="flex items-center gap-2">
-          <button class="border border-black px-2 text-lg">−</button>
-          <span class="text-sm">1</span>
-          <button class="border border-black px-2 text-lg">+</button>
-          <button class="ml-auto text-gray-500 hover:text-red-600 text-xl">🗑️</button>
-        </div>
+    <div class="border-t p-4 text-sm">
+      <div class="flex justify-between mb-2">
+        <span>Subtotal</span>
+        <span id="subtotalCarrito">$0</span>
       </div>
-    </div>
-
-    <!-- Línea divisoria -->
-    <hr class="my-2" />
-  </div>
-
-  <!-- Subtotal y total -->
-  <div class="border-t p-4 text-sm">
-    <div class="flex justify-between mb-2">
-      <span>Subtotal</span>
-      <span>$ 398.900</span>
-    </div>
-    <div class="flex justify-between font-bold text-base mb-1">
-      <span>Total</span>
-      <span>$ 398.900</span>
-    </div>
-    <p class="text-[11px] text-gray-500 mb-4">Tasas y fletes calculados en el carrito</p>
+      <div class="flex justify-between font-bold text-base mb-1">
+        <span>Total</span>
+        <span id="totalCarrito">$0</span>
+      </div>
+      <p class="text-[11px] text-gray-500 mb-4">Tasas y fletes calculados en el carrito</p>
 
     <!-- Botón checkout -->
     <a href="/checkout.html">
@@ -86,6 +47,6 @@
     </a>
   </div>
 </section>
-<script type="module" src="/js/script.js"></script>
+  <script type="module" src="/js/cart.js"></script>
 </body>
 </html>

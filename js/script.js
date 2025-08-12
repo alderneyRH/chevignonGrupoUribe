@@ -1,70 +1,76 @@
 import { productos } from "./productos.js";
 import { renderizarCatalogo } from "./render/renderCatalogo.js";
 import { productosGustar, productosRecomendados } from "./render/renderRecomendados.js";
-import { renderizarProducto} from "./render/renderProductoIndividual.js";
+import { renderizarProducto } from "./render/renderProductoIndividual.js";
+import { updateCartCounter, renderCart, getCart } from "./cart.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  // Condicion para cargar funciones en paginas especificas
-  if (window.location.pathname.includes("productos.html")) {
-  // Mostrar productos
-  renderizarCatalogo(productos)
-}
-if (window.location.pathname.includes("producto-pagina.html")) {
-  // Mostrar recomendados
-  productosRecomendados()
-  productosGustar()
-  renderizarProducto()
-}
-
-const menuBtn = document.getElementById("boton-menu");
-const mobileMenu = document.getElementById("menu-celular");
-
-mobileMenu.classList.add("hidden")
-mobileMenu.classList.add("lg:flex")
-
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});
   
-  // Carrito Deslizante
-  const botonCarrito = document.getElementById("botonCarrito");
-  const carritoPanel = document.getElementById("carritoPanel");
+  // 📌 Mostrar productos en la página de catálogo
+  if (window.location.pathname.includes("productos.html")) {
+    renderizarCatalogo(productos, "catalogo");
+  }
 
-  botonCarrito.addEventListener("click", (e) => {
-    e.preventDefault();
-    carritoPanel.classList.toggle("visible");
-    carritoPanel.classList.toggle("oculto");
+  if (window.location.pathname.includes("cart.html")) {
+    getCart();
+  }
 
-    if (carritoPanel.innerHTML.trim() === "") {
-      fetch("cart.html")
-        .then((response) => response.text())
-        .then((html) => {
-          carritoPanel.innerHTML = html;
+  // 📌 Mostrar producto individual
+  if (window.location.pathname.includes("producto-pagina.html")) {
+    productosRecomendados();
+    productosGustar();
+    renderizarProducto();
+  }
 
-          // Cerrar carrito
-          const cerrarCarrito = document.getElementById("cerrarCarrito");
-          if (cerrarCarrito) {
-            cerrarCarrito.addEventListener("click", () => {
-              carritoPanel.classList.remove("visible");
-              carritoPanel.classList.add("oculto");
-            });
-          }
-        })
-        .catch((err) => {
-          carritoPanel.innerHTML = "<p>Error al cargar el carrito.</p>";
-          console.error("Error cargando el carrito:", err);
-        });
+  // 📌 Si estamos en la página del carrito lateral o carrito.html
+  if (document.querySelector("#cart-items")) {
+    renderCart("#cart-items");
+  }
+  
+
+  // 📌 Menú móvil
+  const menuBtn = document.getElementById("boton-menu");
+  const mobileMenu = document.getElementById("menu-celular");
+  if (menuBtn && mobileMenu) {
+    mobileMenu.classList.add("hidden", "lg:flex");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // 📌 Actualizar contador al iniciar
+  updateCartCounter();
+
+  // 📌 Escuchar cuando el carrito cambie
+  document.addEventListener("cartUpdated", () => {
+    updateCartCounter();
+    if (document.querySelector("#cart-items")) {
+      renderCart("#cart-items");
     }
   });
+});
 
-  // Cerrar el carrito al hacer clic fuera
-  document.addEventListener("click", (e) => {
-    const clicFuera =
-      !carritoPanel.contains(e.target) && !botonCarrito.contains(e.target);
-    if (carritoPanel.classList.contains("visible") && clicFuera) {
-      carritoPanel.classList.remove("visible");
-      carritoPanel.classList.add("oculto");
-    }
-  });
+// transicion suavea en fondo de cabecera principal
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.getElementById("hero-section");
+
+  const fondos = [
+    "/assets/images/vaquero.jpg",
+    "/assets/images/vaquera.jpg",
+    "/assets/images/cuero.jpg",
+  ];
+
+  let indice = 0;
+
+  setInterval(() => {
+    indice = (indice + 1) % fondos.length;
+
+    // Fade suave sin desaparecer contenido
+    hero.style.opacity = 0.8;
+
+    setTimeout(() => {
+      hero.style.backgroundImage = `url('${fondos[indice]}')`;
+      hero.style.opacity = 1;
+    }, 200); // pequeño delay para que el fade sea fluido
+  }, 6000); // cambia cada 5 segundos
 });
