@@ -11,34 +11,29 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/css/prueba.css" />
   </head>
   <body>
-    <header class="relative shadow-xl ring-1 ring-black bg-[var(--marron-hoja-seca)]">
-      <nav class="px-4 py-4 lg:flex lg:justify-between lg:items-center">
+    <header>
+      <nav class="contenedor-nav-header">
         <!-- logo -->
-        <div class="flex justify-between items-center">
-          <div>
-            <a
-              href="/index.html"
-              class="text-2xl font-extrabold tracking-wide text-white rounded-lg"
-            >
+        <div class="header-reponsive">
+          <div class="contenedor-imagen-header hover:scale-105 transition">
+            <a href="/index.html">
               <img
                 src="/assets/images/logos/logoBlancoChevignonClasicoSinFondo.png"
                 alt="Logo"
-                class="h-10 w-auto transition-transform hover:scale-105"
               />
             </a>
           </div>
-          <div class="flex lg:hidden">
+          <div class="contenedor-boton-hamburguesa">
             <button
               id="boton-menu"
               type="button"
-              class="inline-flex items-center justify-center p-2 rounded-md text-[var(--beige-corteza-suave)]"
+              class="boton-hamburguesa-header"
             >
               <!-- Icono hamburguesa -->
               <svg
-                class="size-8"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -55,89 +50,61 @@
           </div>
         </div>
 
-        <nav id="menu-celular" class="flex flex-col lg:flex-row w-[60%] justify-between">
-          <div id=""
-            class="flex flex-col items-start mt-3 lg:flex-row lg:items-center lg:justify-between lg:m-0 lg:ml-5">
+        <nav id="menu-celular" class="menu-categorias-header">
+          <div id="" class="menu vinculos-categorias-header">
             <!-- menu header -->
-            <ul class="menu flex flex-col lg:flex-row items-start text-sm font-medium gap-8 mb-2 lg:mb-0">
+            <ul>
               <li>
-                <a
-                  href="/productos.html"
-                  class="text-[var(--gris-niebla)] hover:text-white transition-colors"
-                >
-                  Hombres
-                </a>
+                <a href="/productos.html"> Hombres </a>
               </li>
               <li>
-                <a
-                  href="/productos.html"
-                  class="text-[var(--gris-niebla)] hover:text-white transition-colors"
-                >
-                  Mujeres
-                </a>
+                <a href="/productos.html"> Mujeres </a>
               </li>
               <li>
-                <a
-                  href="/productos.html"
-                  class="text-[var(--gris-niebla)] hover:text-white transition-colors"
-                >
-                  Niños
-                </a>
+                <a href="/productos.html"> Niños </a>
               </li>
             </ul>
           </div>
-          
-            
-        
-            <!-- iconos header-->
-            <div
-              class="flex items-center  w-full lg:w-auto mt-4 lg:mt-0 justify-between gap-5 "
-            >
-              <!-- buscador -->
-              <div class="relative">
-                <input
-                  type="search"
-                  placeholder="Buscar..."
-                  class="border border-[var(--gris-arena)] bg-[var(--beige-corteza-suave)] rounded pl-10 pr-3 py-1 text-sm text-[var(--gris-grafito)] focus:outline-none focus:ring-2 focus:ring-[var(--mostaza-suave)] transition"
-                />
-                <div
-                  class="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none"
+
+          <!-- iconos header-->
+          <div class="contenedor-iconos-header">
+            <!-- buscador -->
+            <div class="barra-busqueda-header">
+              <input type="search" placeholder="Buscar..." />
+              <div class="icono-busqueda">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    class="w-5 h-5 text-[var(--marron-hoja-seca)]"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 7.5 7.5a7.5 7.5 0 0 0 9.15 9.15z"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 7.5 7.5a7.5 7.5 0 0 0 9.15 9.15z"
+                  />
+                </svg>
               </div>
-              <div class="flex gap-4">
+            </div>
+            <div class="iconos-header-accesos">
               <!-- bandera -->
-              <img
-                width="32"
-                height="32"
-                src="https://img.icons8.com/color/48/colombia-circular.png"
-                alt="colombia-circular"
-              />
+              <button class="boton-iconos-header hover:scale-105 transition">
+                <img
+                  width="32"
+                  height="32"
+                  src="https://img.icons8.com/color/48/colombia-circular.png"
+                  alt="colombia-circular"
+                />
+              </button>
               <!-- usuario -->
-              <button
-                class="text-[var(--gris-niebla)] hover:text-white transition"
-              >
-                <a href="">
+              <button class="boton-iconos-header hover:scale-105 transition">
+                <a href="/login-registro.html">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="size-6"
                   >
                     <path
                       stroke-linecap="round"
@@ -148,17 +115,13 @@
                 </a>
               </button>
               <!-- carrito -->
-              <button
-                id="botonCarrito"
-                class="text-[var(--gris-niebla)] hover:text-white transition"
-              >
+              <button id="botonCarrito" class="hover:scale-105 transition boton-iconos-header">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -167,18 +130,12 @@
                   />
                 </svg>
               </button>
-              </div>
-              
-              <div id="carritoPanel" class="carrito-panel oculto">
-                
-              </div>
             </div>
-            </div>
-          </nav>
-            
-          
-        
-      
+
+            <div id="carritoPanel" class="carrito-panel"></div>
+          </div>
+        </nav>
+      </nav>
     </header>
     <script src="/js/script.js" type="module"></script>
   </body>

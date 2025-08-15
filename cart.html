@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito|Chevignon</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,19 +12,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- PANEL LATERAL DE BOLSA -->
-<section class="fixed top-0 right-0 w-full max-w-md h-full bg-white z-50 shadow-lg flex flex-col">
-
-  <!-- Encabezado -->
-  <div class="flex justify-between items-center p-4 border-b">
-    <div class="flex items-center gap-2 font-medium text-base">
-      <span class="text-xl"><img src="https://chevignon.vtexassets.com/assets/vtex.file-manager-graphql/images/4ed64a5a-7b89-40af-b31c-d85a1fa51334___7d5edaf384c76655da436c7883e31b32.svg" class="w-12 h-12"></span> Mi bolsa
-    </div>
-    <button class="text-xl" id="cerrarCarrito">✖️</button>
-  </div>
+    <section
+      class="fixed top-0 right-0 w-full max-w-md h-full bg-white z-50 shadow-lg flex flex-col"
+    >
+      <!-- Encabezado -->
+      <div class="flex justify-between items-center p-4 border-b">
+        <div class="flex items-center gap-2 font-medium text-base">
+          <span class="text-xl"
+            ><img
+              src="https://chevignon.vtexassets.com/assets/vtex.file-manager-graphql/images/4ed64a5a-7b89-40af-b31c-d85a1fa51334___7d5edaf384c76655da436c7883e31b32.svg"
+              class="w-12 h-12"
+          /></span>
+          Mi bolsa
+        </div>
+        <button class="text-xl" id="cerrarCarrito">✖️</button>
+      </div>
 
     <div id="cart-items" class="p-4 flex flex-col gap-4 flex-grow overflow-y-auto"></div>
 
@@ -47,6 +53,6 @@
     </a>
   </div>
 </section>
-  <script type="module" src="/js/cart.js"></script>
+  <script type="module" src="/js/script.js"></script>
 </body>
 </html>

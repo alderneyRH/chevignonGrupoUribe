@@ -1,87 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Envios</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Envios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.css" />
-</head>
-<body>
-  
-  <section
-    class="py-10 bg-[var(--verde-musgo-apagado)] text-center text-[var(--gris-grafito)]"
-  >
-    <div
-      class="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4"
-    >
-      <!-- item 1 -->
-      <div class="flex flex-col items-center  justify-center">
-        <img
-          width="60"
-          height="60"
-          src="https://img.icons8.com/external-victoruler-solid-victoruler/64/external-return-box-logistics-victoruler-solid-victoruler.png"
-          alt="cambios y devoluciones" class="text-[var(--verde-musgo-apagado)]"
-        />
-        <h3 class="font-semibold text-[var(--gris-niebla)] text-lg">
-          Cambios y devoluciones GRATIS
-        </h3>
-        <p class="text-sm text-[var(--gris-niebla)] max-w-xs">
-          Gestiona tus pedidos a través de la web o en nuestras tiendas físicas.
-        </p>
+    <link rel="stylesheet" href="./css/prueba.css" />
+  </head>
+  <body>
+    <section class="contenedor-items-envios">
+      <div class="grid-items-envios">
+        <!-- item 1 -->
+        <div class="item-envios">
+          <img
+            src="https://img.icons8.com/external-victoruler-solid-victoruler/64/external-return-box-logistics-victoruler-solid-victoruler.png"
+            alt="cambios y devoluciones"
+          />
+          <h3>Cambios GRATIS</h3>
+          <p>
+            Gestiona tus pedidos a través de la web o en nuestras tiendas
+            físicas.
+          </p>
+        </div>
+        <!-- item 2 -->
+        <div class="item-envios">
+          <img
+            src="https://img.icons8.com/ios/50/delivery--v2.png"
+            alt="envios express"
+          />
+          <h3 class="font-semibold text-[var(--gris-niebla)] text-lg">
+            Envíos Express
+          </h3>
+          <p>Para Medellín y el Área Metropolitana antes de las 4pm</p>
+        </div>
+        <!-- item 3 -->
+        <div class="item-envios">
+          <img
+            src="https://img.icons8.com/material-rounded/24/coin-in-hand.png"
+            alt="medios de pago"
+          />
+          <h3>Múltiples Medios de Pago</h3>
+          <p class="item-envios">
+            Métodos de pago que se ajustan a tus necesidades
+          </p>
+        </div>
+        <!-- item 4 -->
+        <div class="item-envios">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/total-sales-1.png"
+            alt="financiacion"
+          />
+          <h3>Opciones de financiación</h3>
+          <p>Ahora el crédito Chevignon es Su•Pay</p>
+        </div>
       </div>
-      <!-- item 2 -->
-      <div class="flex flex-col items-center space-y-2">
-        <img
-          width="50"
-          height="50"
-          src="https://img.icons8.com/ios/50/delivery--v2.png"
-          alt="envios express"
-        />
-        <h3 class="font-semibold text-[var(--gris-niebla)] text-lg">
-          Envíos Express
-        </h3>
-        <p class="text-sm text-[var(--gris-niebla)] max-w-xs">
-          Para Medellín y el Área Metropolitana antes de las 4pm
-        </p>
-      </div>
-      <!-- item 3 -->
-      <div class="flex flex-col items-center space-y-2">
-        <img
-          width="50"
-          height="50"
-          src="https://img.icons8.com/material-rounded/24/coin-in-hand.png"
-          alt="medios de pago"
-        />
-        <h3 class="font-semibold text-[var(--gris-niebla)] text-base">
-          Múltiples Medios de Pago
-        </h3>
-        <p class="text-sm text-[var(--gris-niebla)] max-w-xs">
-          Métodos de pago que se ajustan a tus necesidades
-        </p>
-      </div>
-      <!-- item 4 -->
-      <div class="flex flex-col items-center space-y-2">
-        <img
-          width="50"
-          height="50"
-          src="https://img.icons8.com/ios-glyphs/30/total-sales-1.png"
-          alt="financiacion"
-        />
-        <h3 class="font-semibold text-[var(--gris-niebla)] text-base">
-          Opciones de financiación
-        </h3>
-        <p class="text-sm text-[var(--gris-niebla)] max-w-xs">
-          Ahora el crédito Chevignon es Su•Pay
-        </p>
-      </div>
-    </div>
-  </section>
-</body>
+    </section>
+  </body>
 </html>

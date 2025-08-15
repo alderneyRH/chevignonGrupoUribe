@@ -7,12 +7,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/prueba.css" />
+    <link
+      rel="icon"
+      type=""
+      href="/assets/images/logos/logoPatoChevignon.png"
+    />
   </head>
-  <body class="bg-cover bg-fixed bg-center bg-no-repeat min-h-screen">
+  <body>
     <!-- Header -->
-    <header class="w-full">
+    <header>
       <div id="header">
         <script>
           fetch("./partials/header.html")
@@ -23,88 +31,96 @@
         </script>
       </div>
     </header>
+    <main class="mt-20 mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Breadcrumb -->
+      <nav class="bg-[var(--madera-tostada-elegante)] opacity-75">
+        <div class="max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
+          <ol class="flex items-center space-x-2 text-sm">
+            <li>
+              <a
+                href="#"
+                class="opacity-100 text-[var(--gris-niebla)] hover:text-[var(--beige-corteza-suave)]"
+                >Home</a
+              >
+            </li>
+            <li class="opacity-100 text-[var(--gris-niebla)]">/</li>
+            <li>
+              <a
+                href="#"
+                class="w-full text-[var(--gris-niebla)] hover:text-[var(--beige-corteza-suave)]"
+                >Ropa de hombre</a
+              >
+            </li>
+            <li class="opacity-100 text-[var(--gris-niebla)]">/</li>
+            <li>
+              <a
+                href="#"
+                class="text-[var(--gris-niebla)] hover:text-[var(--beige-corteza-suave)]"
+                >Chaquetas</a
+              >
+            </li>
+            <li class="opacity-100 text-[var(--gris-niebla)]">/</li>
+            <li class="text-[var(--madera-tostada-elegante)] font-medium">
+              <a
+                href=""
+                class="text-[var(--madera-tostada-elegante)] font-medium"
+                >Chaqueta Denim Trucker</a
+              >
+            </li>
+          </ol>
+        </div>
+      </nav>
 
-    <!-- Breadcrumb -->
-    <nav class="bg-[var(--madera-tostada-elegante)]  opacity-75">
-      <div class="max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
-        <ol class="flex items-center space-x-2 text-sm">
-          <li>
-            <a
-              href="#"
-              class="opacity-100 text-[var(--gris-niebla)] hover:text-[var(--beige-corteza-suave)]"
-              >Home</a
-            >
-          </li>
-          <li class="opacity-100 text-[var(--gris-niebla)]">/</li>
-          <li>
-            <a
-              href="#"
-              class="w-full text-[var(--gris-niebla)] hover:text-[var(--beige-corteza-suave)]"
-              >Ropa de hombre</a
-            >
-          </li>
-          <li class="opacity-100 text-[var(--gris-niebla)]">/</li>
-          <li>
-            <a
-              href="#"
-              class="text-[var(--gris-niebla)] hover:text-[var(--beige-corteza-suave)]"
-              >Chaquetas</a
-            >
-          </li>
-          <li class="opacity-100 text-[var(--gris-niebla)]">/</li>
-          <li class="text-[var(--madera-tostada-elegante)] font-medium">
-            <a href="" class="text-[var(--madera-tostada-elegante)] font-medium"
-              >Chaqueta Denim Trucker</a
-            >
-          </li>
-        </ol>
-      </div>
-    </nav>
+      <!-- Main Content -->
 
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <!-- Seccion Productos -->
-      <section class="bg-[var(--verde-musgo-opacidad)]  grid grid-cols-1 md:grid-cols-2 md:h-1/3 gap-8 lg:gap-12 p-5 rounded-xl">
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 lg:h-[700px] gap-8 lg:gap-12 p-5 rounded-xl mb-32"
+      >
         <!-- Imagenes Producto -->
-        <section class=" flex flex-col lg:flex-row gap-2 items-start  ">
-          <div class="flex justify-center overflow-hidden rounded-xl size-full lg:size-full">
-            <img
-              id="imagen"
-              width=""
-              src=""
-              alt=""
-              class=""
-            />
-            
+        <section
+          class="flex flex-col lg:flex-row lg:h-[700px] gap-2 items-start rounded-xl"
+        >
+          <div
+            class="flex justify-center overflow-hidden rounded-xl size-full lg:size-full shadow-lg"
+          >
+            <img id="imagen" width="" src="" alt="" class="size-full" />
           </div>
 
-          <div class="grid grid-cols-4 md:grid-cols-3
-          md:grid-rows-2 lg:grid-cols-1 lg:grid-rows-4 gap-2 md:size-11/12 lg:h-3/5 lg:w-1/3 justify-items-center items-start  ">
-            <img id="imagen"
+          <div
+            class="grid grid-cols-4 md:grid-cols-3 md:grid-rows-2 lg:grid-cols-1 lg:grid-rows-4 gap-2 md:size-11/12 lg:h-full lg:w-1/3 justify-items-center items-start"
+          >
+            <img
+              id="imagen"
               src="/assets/images/ropa-hombres/camisas/camisa1.webp"
               alt="Vista 1"
-              class="size-full object-cover  rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-400 transition"
+              class="size-full object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-[var(--color-texto)] transition"
             />
-            <img id="imagen"
+            <img
+              id="imagen"
               src="./assets/images/ropa-hombres/chaquetas/chaqueta2.webp"
               alt="Vista 2"
-              class="size-full object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-400 transition"
+              class="size-full object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-[var(--color-texto)] transition"
             />
-            <img id="imagen"
+            <img
+              id="imagen"
               src=""
               alt="Vista 3"
-              class="size-full object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-400 transition"
+              class="size-full object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-[var(--color-texto)] transition"
             />
-            <img id="imagen"
+            <img
+              id="imagen"
               src=""
               alt="Vista 4"
-              class="size-full object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-400 transition"
+              class="size-full object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-[var(--color-texto)] transition"
             />
           </div>
         </section>
 
         <!-- Informacion producto -->
-        <section class=" ">
+        <section
+          class="bg-[var(--color-iconos)] p-6 rounded-xl flex flex-col justify-between"
+        >
           <div>
             <h1
               id="nombre"
@@ -140,28 +156,34 @@
                   />
                 </svg>
               </div>
-              <span class="text-sm text-[var(--gris-niebla)] ml-2">(127 valoraciones)</span>
+              <span class="text-sm text-[var(--gris-niebla)] ml-2"
+                >(127 valoraciones)</span
+              >
             </div>
 
-            <div class="text-3xl md:text-4xl font-bold text-[var(--gris-niebla)]">
+            <div
+              class="text-3xl md:text-4xl font-bold text-[var(--gris-niebla)]"
+            >
               <strong id="precio" class=""></strong>
             </div>
           </div>
 
           <!-- Color Selection -->
           <div>
-            <h3 class="font-semibold mt-5 mb-1 text-[var(--gris-niebla)]">Color</h3>
+            <h3 class="font-semibold mt-5 mb-1 text-[var(--gris-niebla)]">
+              Color
+            </h3>
             <div class="flex space-x-3">
               <button
-                class="w-10 h-10 rounded-full bg-blue-900 border-2 border-transparent hover:border-gray-400 transition"
+                class="w-10 h-10 rounded-full bg-blue-900 border-2 border-transparent hover:border-[var(--color-texto)] transition"
                 title="Azul Ultra Oscuro"
               ></button>
               <button
-                class="w-10 h-10 rounded-full bg-gray-800 border-2 border-transparent  hover:border-gray-400 transition"
+                class="w-10 h-10 rounded-full bg-gray-800 border-2 border-transparent hover:border-[var(--color-texto)] transition"
                 title="Negro"
               ></button>
               <button
-                class="w-10 h-10 rounded-full bg-blue-600 border-2 border-transparent hover:border-gray-400 transition"
+                class="w-10 h-10 rounded-full bg-blue-600 border-2 border-transparent hover:border-[var(--color-texto)] transition"
                 title="Azul Medio"
               ></button>
             </div>
@@ -174,22 +196,22 @@
             </div>
             <div class="grid grid-cols-4 gap-2">
               <button
-                class="py-3 px-4 border border-[var(--gris-niebla)] rounded-md hover:border-[var(--beige-corteza-suave)] text-[var(--beige-corteza-suave)] transition"
+                class="py-3 px-4 border border-[var(--color-texto)] rounded-md hover:border-[var(--color-texto)] hover:bg-[var(--color-texto)] hover:text-[var(--color-texto-inverso)] text-[var(--color-texto)] text-xl transition duration-200 ease-in-out hover:scale-105"
               >
                 S
               </button>
               <button
-                class="py-3 px-4 border border-[var(--gris-niebla)] rounded-md hover:border-[var(--beige-corteza-suave)] text-[var(--beige-corteza-suave)] transitio"
+                class="py-3 px-4 border border-[var(--color-texto)] rounded-md hover:border-[var(--color-texto)] hover:bg-[var(--color-texto)] hover:text-[var(--color-texto-inverso)] text-[var(--color-texto)] text-xl transition duration-200 ease-in-out hover:scale-105"
               >
                 M
               </button>
               <button
-                class="py-3 px-4 border border-[var(--beige-corteza-suave)] text-[var(--beige-corteza-suave)] rounded-md"
+                class="py-3 px-4 border border-[var(--color-texto)] rounded-md hover:border-[var(--color-texto)] hover:bg-[var(--color-texto)] hover:text-[var(--color-texto-inverso)] text-[var(--color-texto)] text-xl transition duration-200 ease-in-out hover:scale-105"
               >
                 L
               </button>
               <button
-                class="py-3 px-4 border border-[var(--marron-hoja-seca)] bg-[var(--marron-hoja-seca)] text-white rounded-md"
+                class="py-3 px-4 border border-[var(--color-texto)] rounded-md hover:border-[var(--color-texto)] hover:bg-[var(--color-texto)] hover:text-[var(--color-texto-inverso)] text-[var(--color-texto)] text-xl transition duration-200 ease-in-out hover:scale-105"
               >
                 XL
               </button>
@@ -197,14 +219,14 @@
           </div>
 
           <!-- Agregar al carrito -->
-          <button
-            class="w-full bg-[var(--marron-hoja-seca)] text-[var(--beige-corteza-suave)] tracking-[2px] py-4 px-6 rounded-md font-semibold hover:bg-[var(--verde-hojalata-claro)] transition"
+          <button id="btnAgregarCarrito"
+            class="w-full bg-[var(--color-texto)] text-[var(--color-texto-inverso)] tracking-[2px] py-4 px-6 rounded-md font-semibold hover:bg-[var(--color-texto-inverso)] hover:text-[var(--color-texto)] transition duration-200 ease-in-out hover:scale-105"
           >
             Agregar a la bolsa
           </button>
 
           <!-- Politicas -->
-          <div class=" pt-6 space-y-3 text-sm">
+          <div class="pt-6 space-y-3 text-sm">
             <div class="flex items-center text-[var(--beige-corteza-suave)]">
               <svg
                 class="w-5 h-5 mr-2"
@@ -258,19 +280,20 @@
       </section>
 
       <!-- Productos recomendados -->
-      <section class="w-full ">
-        <h2 class="bebas-neue-regular text-5xl font-bold text-[var(--beige-corteza-suave)] mt-14 mb-8">
+      <section class="w-full">
+        <h2
+          class="bebas-neue-regular text-5xl font-bold text-[var(--beige-corteza-suave)] mt-14 mb-8"
+        >
           Productos recomendados
         </h2>
-        <div
-          id="productosRecomendados"
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center gap-4 contenedor-productos"
-        ></div>
+        <div id="productosRecomendados" class="contenedor-productos"></div>
       </section>
 
       <!-- Productos que podrian gustar -->
-      <section class="w-full ">
-        <h2 class="bebas-neue-regular text-5xl font-bold text-[var(--beige-corteza-suave)] mt-14 mb-8">
+      <section class="w-full">
+        <h2
+          class="bebas-neue-regular text-5xl font-bold text-[var(--beige-corteza-suave)] mt-14 mb-8"
+        >
           Productos recomendados
         </h2>
         <div
@@ -303,26 +326,5 @@
     </footer>
     <!-- <script src="/js/detalle.js" type="module"></script> -->
     <script src="/js/script.js" type="module"></script>
-    <script src="/js/cart.js" type="module"></script>
-    <script type="module">
-import { addToCart } from "./js/cart.js";
-
-document.querySelector("button.w-full").addEventListener("click", () => {
-    const nombre = document.querySelector("h1").textContent.trim();
-    const precio = document.querySelector(".text-lg.font-semibold").textContent.replace(/\$|,/g, "").trim();
-    const imagen = document.querySelector("section img").src;
-
-    const product = {
-        id: nombre.toLowerCase().replace(/\s+/g, "-"), // ID simple
-        nombre,
-        precio,
-        imagen,
-        cantidad: 1
-    };
-
-    addToCart(product);
-    alert("Producto agregado a la bolsa ✅");
-});
-</script>
   </body>
 </html>

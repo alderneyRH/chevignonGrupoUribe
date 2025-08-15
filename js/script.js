@@ -1,57 +1,53 @@
+import { renderizarCatalogo } from "/js/render/renderCatalogo.js";
+import { activarCarouseles } from "/js/secciones.js";
+import { contenedorCarrito} from "./carrito.js";
+import { renderizarProducto, productosRecomendados, productosGustar } from "./render/renderProductoIndividual.js";
 import { productos } from "./productos.js";
-import { renderizarCatalogo } from "./render/renderCatalogo.js";
-import { productosGustar, productosRecomendados } from "./render/renderRecomendados.js";
-import { renderizarProducto } from "./render/renderProductoIndividual.js";
-import { updateCartCounter, renderCart, getCart } from "./cart.js";
 
+
+
+  // funcionalidad carruseles
 document.addEventListener("DOMContentLoaded", () => {
-  
-  // 📌 Mostrar productos en la página de catálogo
-  if (window.location.pathname.includes("productos.html")) {
-    renderizarCatalogo(productos, "catalogo");
+  // Condicion para cargar funciones en paginas especificas
+
+  if (window.location.pathname.includes("index.html") || window.location.pathname === "/" ) {
+    // Activar carouseles
+    activarCarouseles();
+    //inicializarCarritoDeslizante();
+    /* getCart(); // Cargar carrito al inicio */
+   
+    
+  }
+  if (window.location.pathname.includes("productos.html") || window.location.pathname === "/")  {
+    // Renderizar catalogo de productos
+    renderizarCatalogo(productos);
+    //inicializarCarritoDeslizante();
+    //getCart(); // Cargar carrito al inicio 
+    /* renderizarProducto("productoSeleccionado");  */
+    /* renderizarProductoCarrito("productosCarrito"); */
+    
+
   }
 
-  if (window.location.pathname.includes("cart.html")) {
-    getCart();
+  if (window.location.pathname.includes("producto-pagina.html") || window.location.pathname === "/") {
+   // funcionalidad general de carrito
+   
+    //inicializarCarritoDeslizante();
+    renderizarProducto("productoSeleccionado");
+    productosGustar (); // 3 productos aleatorios recomendados
+    productosRecomendados(); // 3 productos aleatorios recomendados
+    renderizarCatalogo()
+
+   // getCart(); Cargar carrito al inicio
+    
   }
-
-  // 📌 Mostrar producto individual
-  if (window.location.pathname.includes("producto-pagina.html")) {
-    productosRecomendados();
-    productosGustar();
-    renderizarProducto();
-  }
-
-  // 📌 Si estamos en la página del carrito lateral o carrito.html
-  if (document.querySelector("#cart-items")) {
-    renderCart("#cart-items");
-  }
-  
-
-  // 📌 Menú móvil
-  const menuBtn = document.getElementById("boton-menu");
-  const mobileMenu = document.getElementById("menu-celular");
-  if (menuBtn && mobileMenu) {
-    mobileMenu.classList.add("hidden", "lg:flex");
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }
-
-  // 📌 Actualizar contador al iniciar
-  updateCartCounter();
-
-  // 📌 Escuchar cuando el carrito cambie
-  document.addEventListener("cartUpdated", () => {
-    updateCartCounter();
-    if (document.querySelector("#cart-items")) {
-      renderCart("#cart-items");
-    }
-  });
 });
 
+  contenedorCarrito()
+  
+
+
 // transicion suavea en fondo de cabecera principal
-document.addEventListener("DOMContentLoaded", () => {
   const hero = document.getElementById("hero-section");
 
   const fondos = [
@@ -73,4 +69,3 @@ document.addEventListener("DOMContentLoaded", () => {
       hero.style.opacity = 1;
     }, 200); // pequeño delay para que el fade sea fluido
   }, 6000); // cambia cada 5 segundos
-});

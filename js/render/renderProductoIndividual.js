@@ -1,6 +1,32 @@
-import { addToCart } from "/js/cart.js";
+import { obtenerProductosAleatorios } from "../utils/utils.js";
+import{ productos } from "../productos.js";
+import { renderizarCatalogo } from "./renderCatalogo.js";
+import { agregarAlCarrito } from "../cart.js";
 
+// Función para mostrar el producto en la página individual
 export function renderizarProducto() {
+  const producto = JSON.parse(localStorage.getItem("productoSeleccionado"));
+
+  if (producto) {
+    // Mostrar información del producto
+    document.getElementById("nombre").textContent = producto.nombre;
+    document.getElementById("precio").textContent = "$" + producto.precio.toLocaleString();
+    document.getElementById("imagen").src = producto.imagen;
+
+    // Botón para agregar al carrito
+    document.getElementById("btnAgregarCarrito").addEventListener("click", () => {
+      agregarAlCarrito(producto);
+    });
+
+  } else {
+    // Si no hay producto guardado, mostrar mensaje
+    document.body.innerHTML = "<p>No se encontró el producto. Intenta volver a la tienda.</p>";
+  }
+}
+
+
+
+/*  export function renderizarProducto() {
   const producto = JSON.parse(localStorage.getItem("productoSeleccionado"));
 
   if (producto) {
@@ -8,46 +34,36 @@ export function renderizarProducto() {
     document.getElementById("precio").textContent = "$" + producto.precio.toLocaleString();
     document.getElementById("imagen").src = producto.imagen;
 
-    // Botón "Agregar al carrito"
-    const botonAgregar = document.createElement("button");
-    botonAgregar.textContent = "Agregar a la bolsa";
-    botonAgregar.className = "bg-black text-white px-4 py-2 mt-4 rounded hover:bg-gray-800";
+    // Botón para agregar al carrito
+    document.getElementById("btnAgregarCarrito").addEventListener("click", () => {
+      agregarAlCarrito(producto);
 
-    botonAgregar.addEventListener("click", () => {
-      addToCart({ ...producto, cantidad: 1 });
-      showToast("Producto agregado a la bolsa 🛍️");
     });
+  } else {
+  document.body.innerHTML = "<p>No se encontró el producto. Intenta volver a la tienda.</p>";
+  }
+}   */
 
-    const contenedor = document.getElementById("detalle-producto") || document.body;
-    contenedor.appendChild(botonAgregar);
+/* export function renderizarProductoCarrito() {
+  const productosCarrito = JSON.parse(localStorage.getItem("productosCarrito")) || [];
+
+  if (productosCarrito) {
+    document.getElementById("nombre").textContent = productosCarrito.nombre;
+    document.getElementById("precio").textContent = "$" + productosCarrito.precio.toLocaleString();
+    document.getElementById("imagen").src = productosCarrito.imagen;
 
   } else {
-    document.body.innerHTML = "<p>No se encontró el producto. Intenta volver a la tienda.</p>";
-  }
+  document.body.innerHTML = "<p>No se encontró el producto. Intenta volver a la tienda.</p>";
+  } 
+  
+}*/
+
+export function productosRecomendados () {
+  const recomendados = obtenerProductosAleatorios(productos, 3); // 4 aleatorios
+  renderizarCatalogo(recomendados, "productosRecomendados"); // ID del contenedor en HTML
 }
 
-// ==== Toast reutilizable ====
-function showToast(message) {
-  let toast = document.getElementById("toast");
-  if (!toast) {
-    toast = document.createElement("div");
-    toast.id = "toast";
-    toast.style.cssText = `
-      position: fixed; bottom: 20px; right: 20px;
-      background: black; color: white;
-      padding: 12px 20px; border-radius: 8px;
-      opacity: 0; pointer-events: none;
-      transform: translateY(20px);
-      transition: all 0.3s ease-in-out;
-      z-index: 9999;
-    `;
-    document.body.appendChild(toast);
-  }
-  toast.textContent = message;
-  toast.style.opacity = "1";
-  toast.style.transform = "translateY(0)";
-  setTimeout(() => {
-    toast.style.opacity = "0";
-    toast.style.transform = "translateY(20px)";
-  }, 2000);
-}
+ export function productosGustar() {
+  const recomendados = obtenerProductosAleatorios(productos, 3); // 4 aleatorios
+  renderizarCatalogo(recomendados, "productosGustar"); // ID del contenedor en HTML
+} 

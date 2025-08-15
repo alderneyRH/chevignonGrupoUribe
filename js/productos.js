@@ -2,7 +2,7 @@ export let productos = [
   {
     id: 1,
     nombre:
-      "Jean Straight Fit Tiro Medio Boot Cut Azul Medio con Rotos para Hombre",
+      "Jean Straight Fit Tiro Medio Boot Cut con Roto",
     descripcion:
       "Jean para hombre, Morrison: straight fit, boot cut. Color azul, tono medio.",
     tipo: "jeans",
@@ -13,7 +13,7 @@ export let productos = [
   {
     id: 2,
     nombre:
-      "Jean Súper Slim Fit Tiro Bajo Bota Super Slim Azul Oscuro para Hombre",
+      "Jean Súper Slim Fit Tiro Bajo Bota Super Slim",
     descripcion:
       "Jean para hombre, Rider: súper slim fit, bota súper slim. Color azul, tono oscuro.",
     tipo: "jeans",
@@ -34,7 +34,7 @@ export let productos = [
   {
     id: 4,
     nombre:
-      "Chaqueta en Denim Tipo Trucker con Cuello en Cuero Azul Ultra Oscuro para Hombre",
+      "Chaqueta en Denim Tipo Trucker con Cuello en Cuero",
     descripcion:
       "Chaqueta para hombre en denim, tipo trucker, straight fit (silueta recta). Color azul, tono ultra oscuro.",
     tipo: "chaquetas",
@@ -65,7 +65,7 @@ export let productos = [
   {
     id: 7,
     nombre:
-      "Tenis de Hombre en Cuero, Caña Baja Horma Básica Estilizada - Cuero Anilina Liso Diseño Unicolor",
+      "Tenis de Hombre en Cuero, Caña Baja Horma Básica Estilizada",
     descripcion: "Tenis cortos de hombre, estilo casual",
     tipo: "zapatos",
     categoria: "hombre",
@@ -94,7 +94,7 @@ export let productos = [
   {
     id: 10,
     nombre:
-      "Camisa Slim Fit Manga Corta en Mezcla de Algodón y Lino para Hombre",
+      "Camisa Slim Fit Manga Corta en Mezcla de Algodón y Lino",
     descripcion: "Camisa para hombre, slim fit (silueta ajustada).",
     tipo: "camisas",
     categoria: "hombre",
@@ -103,7 +103,7 @@ export let productos = [
   },
   {
     id: 11,
-    nombre: "Camisa de Hombre en Denim, Slim Fit Manga Larga - Azul Claro",
+    nombre: "Camisa de Hombre en Denim, Slim Fit Manga Larga",
     descripcion:
       "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
     tipo: "camisas",
@@ -123,7 +123,7 @@ export let productos = [
   },
   {
     id: 13,
-    nombre: "Pantalón Tipo Chino Regular Fit Boot Cut para Hombre",
+    nombre: "Pantalón Tipo Chino Regular Fit Boot Cut",
     descripcion:
       "Pantalón para hombre, tipo chino. Regular fit (silueta recta), boot cut (bota recta)",
     tipo: "pantalones",
@@ -143,7 +143,7 @@ export let productos = [
   },
   {
     id: 15,
-    nombre: "Pantalón Tipo Jogger para Hombre",
+    nombre: "Pantalón Tipo Jogger",
     descripcion:
       "Los jogger pants evolucionan más allá de su origen deportivo y hoy son una opción clave para un estilo urbano cómodo, pero con intención.",
     tipo: "pantalones",
@@ -153,7 +153,7 @@ export let productos = [
   },
   {
     id: 16,
-    nombre: "Jean Straight Fit Bota Recta para Mujer",
+    nombre: "Jean Straight Fit Bota Rect",
     descripcion:
       "Jean de bota relaxed con detalles en técnica que crea texturas y patrones grabados con herramientas especiales que activa ese relato del rodeo desde lo técnico y artesanal.",
     tipo: "jeans",
@@ -163,7 +163,7 @@ export let productos = [
   },
   {
     id: 17,
-    nombre: "Jean Super High Rise Bota Micro Flare Azul Claro para Mujer",
+    nombre: "Jean Super High Rise Bota Micro Flare",
     descripcion:
       "Jean para mujer, High Cosmo: super high rise, bota micro flare. Color azul, tono claro.",
     tipo: "jeans",
@@ -213,7 +213,7 @@ export let productos = [
   },
   {
     id: 22,
-    nombre: "Vestido Tipo Blazer para Mujer",
+    nombre: "Vestido Tipo Blazer",
     descripcion:
       "Vestido corto, tipo blazer, diseño cruzado con cuello de solapa, escote en V, manga larga",
     tipo: "vestidos",
@@ -223,7 +223,7 @@ export let productos = [
   },
   {
     id: 23,
-    nombre: "Vestido Largo con Estampado Maxi Print de Flores para Mujer",
+    nombre: "Vestido Largo con Estampado Maxi Print de Flores",
     descripcion: "Maxi dress, silueta línea A, largo al tobillo.",
     tipo: "vestidos",
     categoria: "mujer",
@@ -243,7 +243,7 @@ export let productos = [
   },
   {
     id: 25,
-    nombre: "Camiseta Tipo Chaleco para Mujer",
+    nombre: "Camiseta Tipo Chaleco",
     descripcion:
       "Esta camiseta tipo chaleco con escote en V y detalles de jaladeras, elaborado en mezcla de poliéster, rayón y elastano,",
     tipo: "camisetas",
@@ -253,7 +253,7 @@ export let productos = [
   },
   {
     id: 26,
-    nombre: "Camiseta Estampada con Escote Almendrado y Manga Larga para Mujer",
+    nombre: "Camiseta Estampada con Escote Almendrado y Manga Larga",
     descripcion: "Camiseta para mujer, silueta ajustada.",
     tipo: "camisetas",
     categoria: "mujer",
@@ -262,7 +262,7 @@ export let productos = [
   },
   {
     id: 27,
-    nombre: "Camiseta con Detalle de Piedras para Mujer",
+    nombre: "Camiseta con Detalle de Piedras",
     descripcion:
       "Esta camiseta semi ajustada en algodón incluye piedras aplicadas al calor que añaden un toque de brillo y originalidad.",
     tipo: "camisetas",
@@ -310,7 +310,7 @@ export let productos = [
   },
   {
     id: 32,
-    nombre: "Camiseta Estampada en Algodón para Niño",
+    nombre: "Camiseta Estampada en Algodón",
     descripcion: "Camiseta gráfica para niño, straight fit (silueta recta).",
     tipo: "camisetas",
     categoria: "niño",
@@ -329,7 +329,7 @@ export let productos = [
   },
   {
     id: 34,
-    nombre: "Chaqueta Silueta Bomber para Niño",
+    nombre: "Chaqueta Silueta Bomber",
     descripcion:
       "Diseño con patrón acolchado de rombos en el cuerpo y mangas acolchadas lisas.",
     tipo: "chaquetas",
@@ -339,7 +339,7 @@ export let productos = [
   },
   {
     id: 35,
-    nombre: "Chaqueta Tipo Aviador para Niño",
+    nombre: "Chaqueta Tipo Aviador",
     descripcion:
       "Cuello camisero, cierre frontal de cremallera, puños y fajón en tejido rib para un mejor ajuste, y bolsillos de ribete.",
     tipo: "chaquetas",
@@ -358,7 +358,7 @@ export let productos = [
   },
   {
     id: 37,
-    nombre: "Pantalón Tipo Jogger para Niño",
+    nombre: "Pantalón Tipo Jogger",
     descripcion:
       "retina elástica con botón, pasadores y cordón para ajustar, cierre, bolsillos delanteros en diagonal, bolsillos traseros de parche y bota amplia ajustada con elástico.",
     tipo: "pantalones",
@@ -388,7 +388,7 @@ export let productos = [
   },
   {
     id: 40,
-    nombre: "Buzo Estampado con Capucha para Niño",
+    nombre: "Buzo Estampado con Capucha",
     descripcion:
       "Cuello con capucha ajustable, puños y fajón en tejido rib, y bolsillo canguro.",
     tipo: "buzos",
@@ -398,7 +398,7 @@ export let productos = [
   },
   {
     id: 41,
-    nombre: "Buzo Tipo Polo para Niño",
+    nombre: "Buzo Tipo Polo",
     descripcion: "Buzo para niño, cerrado con media perilla.",
     tipo: "buzos",
     categoria: "niño",
@@ -418,7 +418,7 @@ export let productos = [
   },
   {
     id: 43,
-    nombre: "Pantaloneta de Baño Para Niño, Regular Fit ",
+    nombre: "Pantaloneta de Baño, Regular Fit ",
     descripcion:
       "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
     tipo: "bermudas",
@@ -428,7 +428,7 @@ export let productos = [
   },
   {
     id: 44,
-    nombre: "Pantaloneta de Baño Para Niño, Regular Fit - Estampado Mini Print",
+    nombre: "Pantaloneta de Baño, Regular Fit - Estampado Mini Print",
     descripcion:
       "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
     tipo: "bermudas",
@@ -438,7 +438,7 @@ export let productos = [
   },
   {
     id: 45,
-    nombre: "Pantaloneta de Baño Para Niño, Regular Fit - Estampado Peces",
+    nombre: "Pantaloneta de Baño, Regular Fit - Estampado Peces",
     descripcion:
       "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
     tipo: "bermudas",
